@@ -1,0 +1,10 @@
+from forex_python.converter import CurrencyRates
+c = CurrencyRates()
+amount = int(input("enter the amount: "))
+from_currency = input("From Currency: ").upper()
+to_currency = input("to currency: ").upper()
+print(from_currency ,"to", to_currency, amount)
+rate = c.get_rate(from_currency, to_currency)
+print("rate: ", rate)
+result = c.convert(from_currency, to_currency , amount)
+print(result)
